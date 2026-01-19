@@ -1,0 +1,50 @@
+(function () {
+  // Slides behaviour
+  window.addEventListener('load', () => {
+    const slidesContainer = document.querySelector('.slides')
+    const slides = [
+      document.querySelector('#slide-1'),
+      document.querySelector('#slide-2'),
+      document.querySelector('#slide-3'),
+      document.querySelector('#slide-4')
+    ]
+
+    const getCurrentScroll = () => {
+      let previousOffset = 0
+      for (const [i, slide] of slides.entries()) {
+        if (previousOffset <=  slidesContainer.scrollLeft && slidesContainer.scrollLeft < slide.offsetLeft) {
+          return i
+        }
+        previousOffset = slide.offsetLeft
+      }
+    }
+
+    window.slidesScrollPlus = () => {
+      const currentScrollIndex = getCurrentScroll() + 1
+      const slide = slides[currentScrollIndex]
+      if (slide) {
+        slidesScrollTo(slide)
+      }
+    }
+
+    window.slidesScrollMinus = () => {
+      const currentScrollIndex = getCurrentScroll() - 1
+      const slide = slides[currentScrollIndex]
+      if (slide) {
+        slidesScrollTo(slide)
+      }
+    }
+
+    window.slidesScrollTo = (slide) => {
+      slidesContainer.scrollTo(slide.offsetLeft, 0)
+    }
+
+
+    document.querySelectorAll('.slides .right-arrow').forEach(
+      (arrow) => arrow.addEventListener('click', slidesScrollPlus)
+    )
+    document.querySelectorAll('.slides .left-arrow').forEach(
+      (arrow) => arrow.addEventListener('click', slidesScrollMinus)
+    )
+  })
+}());

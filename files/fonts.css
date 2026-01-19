@@ -1,0 +1,6 @@
+@font-face {
+  font-family: "Bayshore";
+  src: url("../fonts/bayshore/bayshore-webfont.eot");
+  src: url("../fonts/bayshore/bayshore-webfont.woff") format("woff"),
+  url("../fonts/bayshore/bayshore-webfont.svg#bayshore-webfont") format("svg");
+}

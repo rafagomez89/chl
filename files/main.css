@@ -1,0 +1,902 @@
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #706B4F;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+body {
+  margin: 0;
+}
+
+.inspira-slide {
+  width: 100%;
+  display: flex;
+}
+
+h1, p {
+  margin: 0;
+}
+
+h1 {
+  font-family: 'Butler', serif;
+}
+
+span, b, p {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+b {
+  font-weight: 700;
+}
+
+/* ======================== First Slide ======================== */
+
+.inspira-first-view {
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 50px);
+}
+
+.inspira-first-view-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 48%;
+  width: 100%;
+}
+
+.inspira-chl-title {
+  font-weight: 500;
+}
+
+.inspira-first-view-text-wrapper {
+  z-index: 1;
+  margin: 0 20px;
+}
+
+.inspira-first-view-text-wrapper > span {
+  font-family: 'Bayshore', serif;
+}
+
+/* ======================== Second Slide ======================== */
+.inspira-second-slide {
+  flex-direction: column;
+}
+
+.inspira-mission-title {
+  background-color: white;
+  font-weight: 500;
+  margin-left: 50px;
+}
+
+.inspira-tile-image {
+  position: relative;
+}
+
+.perseverance-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.inspira-tile-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #FAF4E1;
+}
+
+.inspira-tile-text > b,
+.inspira-tile-text > p {
+  padding: 0 20px;
+  font-weight: 400;
+}
+
+.inspira-tile-text > b {
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.inspira-tile-image {
+  flex: 1;
+}
+
+/* ======================== Third Slide ======================== */
+.inspira-third-slide {
+  background-color: white;
+  flex-direction: column;
+}
+
+.perseverance-title-wrapper > h1 {
+  font-weight: 500;
+}
+
+.perseverance-tile-image {
+  width: 100%;
+  position: relative;
+}
+
+.perseverance-tile-image > img {
+  border-radius: 8px;
+}
+
+/* ======================== Fourth Slide ======================== */
+.for-whom-title {
+  height: 350px;
+  background-color: #9C8374;
+  position: relative;
+}
+
+.for-whom-title > h1 {
+  z-index: 1;
+  color: white;
+}
+
+.for-whom-background {
+  opacity: 50%;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  position: absolute;
+}
+
+.for-whom-title,
+.for-whom-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.for-whom-content {
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+.for-whom-content > .know-more-activities {
+  margin-top: 20px;
+}
+
+/* ======================== Slider ========================*/
+.inspira-slider {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 50px 0px 15px;
+}
+
+.slider {
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  padding: 0 20px;
+  position: relative;
+}
+
+.left-arrow,
+.right-arrow {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 40%);
+  color: white;
+  height: 30px;
+  width: 30px;
+  vertical-align: middle;
+  z-index: 10;
+  border:none;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.left-arrow {
+  left: 0;
+}
+
+.left-arrow > i,
+.right-arrow > i {
+  font-size: 16px;
+  top: 6px;
+  position: absolute;
+}
+
+.left-arrow > i {
+  left: 8px;
+}
+.right-arrow > i {
+  right: 8px;
+}
+
+.right-arrow {
+  right: 0;
+}
+
+.slides {
+  display: flex;
+
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+
+
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.slides::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.slides::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 10px;
+}
+
+.slides::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.slides > div {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  margin-right: 50px;
+  border-radius: 16px;
+  transform-origin: center center;
+  transform: scale(1);
+  transition: transform 0.5s;
+  position: relative;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  font-size: 100px;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.slide-image-wrapper {
+  position: relative;
+  color: white;
+  background-color: black;
+  border-radius: 16px;
+  height: 350px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide-header.slide-families,
+.slide-header.slide-general,
+.slide-header.slide-young,
+.slide-header.slide-alpha {
+  opacity: 50%;
+  height: 100%;
+  width: 100%;
+  border-radius: 16px;
+}
+
+.slide-activity-tile {
+  display: flex;
+  background-color: #FAF4E1;
+  border-radius: 8px;
+  min-height: 105px;
+  width: 100%;
+  padding: 12px 16px;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+
+.slide-activity-info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: start;
+  text-align: start;
+  justify-content: center;
+}
+
+.slide-activity-info > span {
+  padding-top: 5px;
+}
+
+.slide-date-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.slides > div:target {
+  /*   transform: scale(0.8); */
+}
+
+img {
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slider > a {
+  display: inline-flex;
+  width: 12px;
+  height: 12px;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 0 0.5rem 0;
+  position: relative;
+  background-color: #D9D9D9;
+  opacity: 50%;
+}
+
+.slider > a:active {
+  top: 1px;
+  opacity: 0;
+}
+
+.slider > a:focus {
+  background: #000;
+}
+
+.slider > a {
+  display: none;
+}
+
+/* ======================== Fifth Slide ======================== */
+
+.inspira-fifth-view {
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.know-more-title,
+.contact-us {
+  align-items: center;
+  font-weight: 500;
+}
+
+.know-more-wrapper,
+.contact-us-wrapper {
+  display: flex;
+}
+
+.location-tile,
+.contact-tile {
+  border-radius: 8px;
+  background-color: #FAF4E1;
+  display: flex;
+  flex-direction: column;
+  padding: 8px 16px;
+}
+
+.contact-tile {
+  flex: 1;
+}
+
+.location-tile > .city,
+.contact-tile > b {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.city > .fa,
+.contact-tile > i {
+  margin-right: 8px;
+  color: #706B4F;
+  opacity: 60%;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+}
+
+@media only screen and (min-width : 501px) {
+
+  /* ======================== First Slide ======================== */
+
+  .inspira-first-view-text-wrapper {
+    text-align: center;
+  }
+
+  .inspira-chl-title {
+    font-size: 70px;
+    line-height: 70px;
+  }
+
+  .inspira-first-view-text-wrapper > span {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .inspira-chl-definition {
+    font-size: 20px;
+    margin-top: 10px;
+    text-align: center;
+    line-height: 24px;
+  }
+
+  /* ======================== Second Slide ======================== */
+
+  .inspira-tile {
+    display: flex;
+    height: 500px;
+  }
+
+  .inspira-mission-title {
+    font-size: 50px;
+    line-height: 50px;
+  }
+
+  .inspira-mission-tiles {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .right-alignment {
+    flex-direction: row-reverse;
+  }
+
+  .right-alignment > .inspira-tile-text {
+    text-align: right;
+  }
+
+  .inspira-tile-text > b,
+  .inspira-tile-text > p {
+    padding: 0 20px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .inspira-tile-image {
+    flex: 1;
+  }
+
+  /* ======================== Third Slide ======================== */
+
+
+  .perseverance-title-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 80px;
+  }
+
+  .perseverance-tiles-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    margin: 50px 40px 0;
+  }
+
+  .perseverance-title-wrapper > h1 {
+    font-size: 50px;
+    line-height: 50px;
+  }
+
+  .perseverance-title-wrapper > p {
+    line-height: 19px;
+    font-size: 16px;
+    padding: 0 20px;
+  }
+
+  .perseverance-tile {
+    margin: 0 25px;
+    height: 720px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .perseverance-tile-image {
+    flex: 1;
+  }
+
+  .perseverance-tile-info {
+    margin-top: 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .perseverance-tile-info > b {
+    line-height: 21px;
+    font-size: 18px;
+  }
+
+  .perseverance-tile-info > p {
+    margin-top: 20px;
+    line-height: 19px;
+    font-size: 16px;
+  }
+
+  /* ======================== Fourth Slide ======================== */
+  .inspira-fourth-slide {
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+  }
+
+  .for-whom-title > h1 {
+    line-height: 35px;
+    font-size: 35px;
+    font-weight: 500;
+  }
+
+  .for-whom-content > i, p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  /* ======================== Slider ======================== */
+
+  .slide-activity-info > b, i {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .slide-activity-info > span {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .slide-activity-date {
+    font-size: 20px;
+    line-height: 24px;
+    margin-left: 5px;
+  }
+
+  .slide-image-wrapper > b {
+    font-size: 30px;
+    line-height: 36px;
+    z-index: 2;
+  }
+
+  /* ======================== Fifth Slide ======================== */
+
+  .know-more-title,
+  .contact-us {
+    text-align: center;
+    margin-top: 80px;
+    font-size: 50px;
+    line-height: 50px;
+  }
+
+  .contact-us-wrapper {
+    padding: 20px;
+  }
+
+  .contact-tile,
+  .location-tile {
+    flex: 1;
+    margin: 10px;
+    padding: 10px;
+    height: 120px;
+  }
+
+  .contact-tile,
+  .location-tile > .city {
+    padding-top: 10px;
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .contact-tile {
+    background-color: transparent;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+
+  .contact-tile {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0 10px;
+    flex-direction: row;
+  }
+}
+
+/* ||||========== Mobile styles ==========|||| */
+@media (max-width:500px)  { /* smartphones, iPhone, portrait 480x320 phones */
+
+  /* ======================== First Slide ======================== */
+
+  .inspira-first-view {
+    height: 600px;
+  }
+
+  .inspira-chl-title {
+    font-size: 50px;
+    line-height: 50px;
+    font-weight: 500;
+    z-index: 1;
+    text-align: start;
+    word-break: break-word;
+    margin-bottom: 8px
+  }
+
+  .inspira-first-view-text-wrapper {
+    margin-top: 11em;
+  }
+
+  .inspira-first-view-text-wrapper > span {
+    font-size: 35px;
+    line-height: 20px;
+  }
+
+  .inspira-chl-definition {
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: left;
+    line-height: 25px;
+  }
+
+  /* ======================== Second Slide ======================== */
+  .inspira-mission-title {
+    font-size: 30px;
+    line-height: 30px;
+    margin: 16px;
+  }
+
+  .inspira-tile {
+    display: block;
+  }
+
+  .right-alignment > .inspira-tile-text {
+    text-align: left;
+  }
+
+  .inspira-tile-image {
+    min-height: 300px;
+  }
+
+  .inspira-tile-text {
+    padding: 24px 0 32px;
+  }
+
+  .inspira-tile-text > b, p {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .inspira-tile-text > b {
+    margin-bottom: 8px;
+  }
+
+  /* ======================== Third Slide ======================== */
+
+  .perseverance-title-wrapper {
+    margin: 50px  20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+  }
+
+  .perseverance-title-wrapper > h1 {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .perseverance-title-wrapper > p {
+    font-size: 18px;
+    line-height: 25px;
+    margin-top: 10px;
+  }
+
+  .perseverance-tile {
+    margin: 50px 20px 0;
+  }
+
+  .perseverance-tile-image {
+    height: 300px;
+  }
+
+  .perseverance-tile-info {
+    margin-top: 20px;
+  }
+
+  .perseverance-tile-info > b, p {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .perseverance-tile-info > p {
+    margin-top: 8px;
+  }
+
+  /* ======================== Fourth Slide ======================== */
+
+  .inspira-fourth-slide {
+    margin-top: 50px;
+  }
+
+  .for-whom-title {
+    height: 200px;
+  }
+
+  .for-whom-title,
+  .for-whom-content {
+    padding: 0 20px;
+  }
+
+  .for-whom-content {
+    text-align: left;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  /* ======================== Slider ========================*/
+
+  .slides > div {
+    width: 100%;
+  }
+
+  .slide-image-wrapper {
+    height: 120px;
+    border-radius: 8px;
+  }
+
+  .slide-image-wrapper > b {
+    font-size: 16px;
+    line-height: 19px;
+    z-index: 2;
+  }
+
+  .slide-activity-tile {
+    flex-direction: column;
+  }
+
+  .slide-activity-info > b, i {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .slide-activity-info > span {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .slide-activity-date {
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 12px;
+  }
+
+  /* ======================== Fifth Slide ======================== */
+
+  .know-more-title,
+  .contact-us{
+    align-items: start;
+    font-size: 30px;
+    line-height: 30px;
+    text-align: start;
+    margin: 24px 20px 0;
+  }
+
+  .know-more-wrapper {
+    flex-direction: column;
+    margin-top: 4px;
+  }
+
+  .contact-tile,
+  .location-tile {
+    margin: 8px 20px;
+    padding: 4px 16px;
+  }
+
+  .location-tile {
+    height: 80px;
+  }
+
+  .contact-tile,
+  .location-tile > .city {
+    padding-top: 10px;
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  .contact-tile {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 0;
+    padding: 0 10px;
+    flex-direction: row;
+  }
+
+  .contact-tile > i {
+    font-size: 16px;
+  }
+
+  .address {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .contact-us-wrapper {
+    height: 56px;
+    padding: 0 16px;
+    margin-top: 12px;
+  }
+
+}

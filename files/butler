@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'Butler';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Butler'), url('https://fonts.cdnfonts.com/s/16241/Butler_Regular.woff') format('woff');
+}
+@font-face {
+    font-family: 'Butler';
+    font-style: normal;
+    font-weight: 250;
+    src: local('Butler'), url('https://fonts.cdnfonts.com/s/16241/Butler_Ultra_Light.woff') format('woff');
+}
+@font-face {
+    font-family: 'Butler';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Butler'), url('https://fonts.cdnfonts.com/s/16241/Butler_Light.woff') format('woff');
+}
+@font-face {
+    font-family: 'Butler';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Butler'), url('https://fonts.cdnfonts.com/s/16241/Butler_Medium.woff') format('woff');
+}
+@font-face {
+    font-family: 'Butler';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Butler'), url('https://fonts.cdnfonts.com/s/16241/Butler_Bold.woff') format('woff');
+}
+@font-face {
+    font-family: 'Butler';
+    font-style: normal;
+    font-weight: 800;
+    src: local('Butler'), url('https://fonts.cdnfonts.com/s/16241/Butler_ExtraBold.woff') format('woff');
+}
+@font-face {
+    font-family: 'Butler';
+    font-style: normal;
+    font-weight: 900;
+    src: local('Butler'), url('https://fonts.cdnfonts.com/s/16241/Butler_Black.woff') format('woff');
+}
+
+
